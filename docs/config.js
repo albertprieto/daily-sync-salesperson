@@ -1,18 +1,21 @@
-// Config del dashboard. Edita estos valores DESPUÉS de crear el repo en GitHub.
+// Config del dashboard. Actualizado automáticamente por la tarea diaria de Cowork.
 window.DAILY_SYNC_CONFIG = {
   // GitHub repo donde están los datos cifrados y se commitean las decisiones
-  // Formato: "owner/repo"
   repo: "albertprieto/daily-sync-salesperson",
 
   // Branch donde commitear decisiones (default: main)
   branch: "main",
 
   // Path relativo dentro del repo donde se publican las propuestas cifradas
-  // (cargadas desde data/index.json)
   dataPath: "data",
 
-  // Path donde se commitean las decisiones (que disparan el workflow apply)
+  // Path donde se commitean las decisiones (que recoge la tarea de polling de Cowork)
   decisionsPath: "decisions",
+
+  // PAT cifrado con la passphrase del día — actualizado cada madrugada por Cowork.
+  // Formato: {v:1, iv:base64, salt:base64, ct:base64}
+  // Si es null, el dashboard pedirá el PAT manualmente.
+  encryptedPat: null,
 
   // Mapa de salesperson IDs → nombres legibles (para mostrar en UI sin fetch extra)
   // Mantener sincronizado con Odoo. IDs vienen de res.users.
