@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Sync Salesperson — Industrial Shields</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-row">
+    <div>
+      <h1>Daily Sync · Salesperson</h1>
+      <p class="sub">Industrial Shields</p>
+    </div>
+    <div class="header-actions">
+      <select id="dateSelect" aria-label="Fecha"></select>
+      <button id="lockBtn" class="btn-secondary" hidden>Bloquear sesión</button>
+    </div>
+  </div>
+</header>
+
+<!-- LOGIN OVERLAY -->
+<div id="loginOverlay" class="overlay">
+  <div class="card login">
+    <h2>Acceso al Daily Sync</h2>
+    <p class="muted">
+      Las propuestas están cifradas. Introduce la <b>passphrase del email de hoy</b>
+      para descifrarlas.
+    </p>
+    <form id="loginForm">
+      <label>
+        Passphrase del email
+        <input type="password" id="appPass" autocomplete="off" required minlength="8" maxlength="64"
+               placeholder="Pega la passphrase del email">
+      </label>
+      <label class="row">
+        <input type="checkbox" id="rememberSession">
+        <span>Recordar durante esta sesión del navegador</span>
+      </label>
+      <button type="submit" class="btn-primary">Desbloquear</button>
+      <p id="loginError" class="error" hidden></p>
+    </form>
+    <details class="muted">
+      <summary>¿Dónde encuentro la passphrase?</summary>
+      <p>La recibes cada día en el email de <b>[Daily Sync]</b> a las 04:00.
+         La passphrase es única para cada día — usa siempre la del email más reciente.
+      </p>
+    </details>
+  </div>
+</div>
+
+<!-- DASHBOARD CONTENT -->
+<main id="app" class="container" hidden>
+
+  <section class="summary card" id="summary"></section>
+
+  <section id="proposals">
+    <details open>
+      <summary><b>Sale orders</b> <span id="soCount" class="chip">0</span></summary>
+      <div id="soList" class="list"></div>
+    </details>
+    <details open>
+      <summary><b>CRM leads</b> <span id="leadCount" class="chip">0</span></summary>
+      <div id="leadList" class="list"></div>
+    </details>
+    <details open>
+      <summary><b>Partners (nuevos)</b> <span id="partnerCount" class="chip">0</span></summary>
+      <div id="partnerList" class="list"></div>
+    </details>
+  </section>
+
+  <div class="apply-bar">
+    <span id="selectedCount" class="muted">0 seleccionadas</span>
+    <button id="selectAllHigh" class="btn-secondary">Marcar todas HIGH</button>
+    <button id="applyBtn" class="btn-primary" disabled>Aplicar seleccionadas</button>
+  </div>
+
+</main>
+
+<!-- APPLY MODAL -->
+<div id="applyModal" class="overlay" hidden>
+  <div class="card">
+    <h2>Aplicar cambios</h2>
+    <p>Vas a aplicar <b id="applyN">0</b> cambios en Odoo. La acción queda registrada
+    en Odoo (tracking + log note) pero requiere reversión manual si fuera necesario.</p>
+
+    <!-- Sección PAT manual — solo se muestra si no hay PAT embebido -->
+    <div id="applyAuth">
+      <p class="muted">Introduce tu <b>GitHub PAT</b> (Personal Access Token con scope <code>repo</code>)
+      para autorizar el commit.</p>
+      <input type="password" id="ghPat" placeholder="ghp_..." autocomplete="off">
+    </div>
+
+    <div class="modal-actions">
+      <button id="applyCancel" class="btn-secondary">Cancelar</button>
+      <button id="applyConfirm" class="btn-primary">Confirmar y aplicar</button>
+    </div>
+    <p id="applyStatus" class="muted"></p>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
