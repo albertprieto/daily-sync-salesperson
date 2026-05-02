@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-05-02",
+    "since": "2026-04-30 22:02:32",
+    "now": "2026-05-02 02:02:32",
+    "totals": {
+      "sale_order": 1,
+      "crm_lead": 0,
+      "res_partner": 0,
+      "skipped": 206
+    },
+    "file": "data/2026-05-02.json.enc"
+  }
+]
