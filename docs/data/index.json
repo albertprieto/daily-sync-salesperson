@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-10",
+    "entry": {
+      "since": "2026-05-08 22:02:33",
+      "now": "2026-05-10 02:02:33",
+      "totals": {
+        "sale_order": 0,
+        "crm_lead": 0,
+        "res_partner": 0,
+        "skipped": 22
+      },
+      "file": "data/2026-05-10.json.enc"
+    }
+  },
+  {
     "date": "2026-05-03",
     "entry": {
       "since": "2026-05-01 22:20:00",
