@@ -1,42 +1,16 @@
-[
-  {
-    "date": "2026-05-10",
-    "entry": {
-      "since": "2026-05-08 22:02:33",
-      "now": "2026-05-10 02:02:33",
+{
+  "entries": {
+    "2026-05-11": {
+      "since": "2026-05-09 22:02:39",
+      "now": "2026-05-11 02:02:39",
       "totals": {
         "sale_order": 0,
         "crm_lead": 0,
         "res_partner": 0,
-        "skipped": 22
+        "skipped": 1012
       },
-      "file": "data/2026-05-10.json.enc"
+      "file": "data/2026-05-11.json.enc"
     }
   },
-  {
-    "date": "2026-05-03",
-    "entry": {
-      "since": "2026-05-01 22:20:00",
-      "now": "2026-05-03 02:20:00",
-      "totals": {
-        "sale_order": 0,
-        "crm_lead": 0,
-        "res_partner": 0,
-        "skipped": 8
-      },
-      "file": "data/2026-05-03.json.enc"
-    }
-  },
-  {
-    "date": "2026-05-02",
-    "since": "2026-04-30 22:02:32",
-    "now": "2026-05-02 02:02:32",
-    "totals": {
-      "sale_order": 1,
-      "crm_lead": 0,
-      "res_partner": 0,
-      "skipped": 206
-    },
-    "file": "data/2026-05-02.json.enc"
-  }
-]
+  "last_updated": "2026-05-11"
+}
