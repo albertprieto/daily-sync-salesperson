@@ -12,5 +12,19 @@
       "file": "data/2026-05-11.json.enc"
     }
   },
-  "last_updated": "2026-05-11"
+  "last_updated": "2026-05-11",
+  "days": {
+    "2026-05-12": {
+      "since": "2026-05-10 22:02:33",
+      "now": "2026-05-12 02:02:33",
+      "totals": {
+        "sale_order": 4,
+        "crm_lead": 7,
+        "res_partner": 9,
+        "skipped": 1157
+      },
+      "file": "data/2026-05-12.json.enc"
+    }
+  },
+  "latest": "2026-05-12"
 }
