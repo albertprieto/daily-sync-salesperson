@@ -34,13 +34,13 @@
       "file": "data/2026-05-15.json.enc"
     },
     "2026-05-17": {
-      "since": "2026-05-16 00:01:30",
-      "now": "2026-05-17 04:01:30",
+      "since": "2026-05-16 05:36:24",
+      "now": "2026-05-17 09:36:24",
       "totals": {
         "sale_order": 0,
         "crm_lead": 0,
         "res_partner": 0,
-        "skipped": 7
+        "skipped": 1006
       },
       "file": "data/2026-05-17.json.enc"
     }
