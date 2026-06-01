@@ -175,6 +175,17 @@
         "skipped": 17
       },
       "file": "data/2026-05-31.json.enc"
+    },
+    "2026-06-01": {
+      "since": "2026-05-30 22:02:30",
+      "now": "2026-06-01 02:02:30",
+      "totals": {
+        "sale_order": 1,
+        "crm_lead": 0,
+        "res_partner": 0,
+        "skipped": 1011
+      },
+      "file": "data/2026-06-01.json.enc"
     }
   },
   "latest": "2026-05-27"
